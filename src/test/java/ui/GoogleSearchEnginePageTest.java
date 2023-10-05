@@ -3,7 +3,7 @@ package ui;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class GoogleSearchEnginePageTest extends GoogleSearchPage {
+public class GoogleSearchEnginePageTest extends GoogleMainPage {
 
     private static final String TEST_VALUE = "Fallout";
 
@@ -18,7 +18,7 @@ public class GoogleSearchEnginePageTest extends GoogleSearchPage {
             description = "When you hover the mouse over the input field, " +
                     "the corresponding tooltip is displayed (in google this is the word 'Search'")
     public void checkCorrespondingTooltip() {
-        Assert.assertEquals(GoogleSearchPage.SEARCH_INPUT.getAttribute("title"), "Search",
+        Assert.assertEquals(SEARCH_INPUT.getAttribute("title"), "Search",
                 "Tooltip with 'Search' word didn't appear on the google.com page");
     }
 
